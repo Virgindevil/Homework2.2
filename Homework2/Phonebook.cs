@@ -87,7 +87,8 @@ namespace Homework2
                         Console.SetCursorPosition(40, 15);
                         person.AddRus(float.Parse(Console.ReadLine())); // Считывание данных  
                         Console.SetCursorPosition(35, 16);
-                        person.Score();
+                        person.Summ();
+                        person.Score();                        
                         Console.WriteLine($"Готово! Ученик занесён в базу. ");
                         Console.SetCursorPosition(32, 17);
                         Console.WriteLine($"Нажмите любую клавишу, чтобы продолжить...");
@@ -99,7 +100,7 @@ namespace Homework2
                     case 2: // Если ввели 2
                         Console.Clear();
                         Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"{"Имя",10} {"Фамилия",15} {"Отчество",15} {"Возраст",10} {"Email",14} {"История",15} {"Математика",7} {"Русский",5} {"Средний балл",7}");
+                        Console.WriteLine($"{"Имя",10} {"Фамилия",15} {"Отчество",15} {"Возраст",10} {"Email",10} {"История",12} {"Математика",7} {"Русский",5} {"Сумма баллов",7} {"Ср.балл",7}");
                         Show(); // Показать список                        
                         Console.SetCursorPosition(32, 25);
                         Console.WriteLine($"Нажмите любую клавишу, чтобы вернуться в меню...");

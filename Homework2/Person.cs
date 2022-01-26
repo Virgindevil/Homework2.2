@@ -12,6 +12,7 @@ namespace Homework2
         private float History; // Переменная Баллов по Истории
         private float Math; // Переменная Баллов по Математике
         private float Rus; // Переменная Баллов по Русскому
+        private float Sum; // Переменная Суммы Баллов 
         private string ScoreF; // Переменная среднего балла по трём предметам
 
         public Person()
@@ -67,11 +68,19 @@ namespace Homework2
             string scoref = score.ToString("#.##");
             ScoreF = scoref;
         }
-        
+
+        public void Summ() // Сумма баллов  
+        {
+            float sum = (History + Math + Rus); 
+            Sum = sum;
+        }
+
+
 
         public void ShowPerson()
         {            
-            Console.WriteLine($"{Fname,10} {Lname,15} {Aname,15} {Age,7} {Email,20} {History,10} {Math,8} {Rus,9} {ScoreF,8}");
+            Console.WriteLine($"{Fname,10} {Lname,15} {Aname,15} {Age,7} {Email,15} {History,8} {Math,8} {Rus,9} {Sum,8} {ScoreF,10} " +
+                $"");
 
         }
     }
