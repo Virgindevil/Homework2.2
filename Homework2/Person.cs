@@ -13,9 +13,9 @@ namespace Homework2
         private string Aname; // переменная Отчества
         private string Age; // Переменная Возраста
         private string Email; // Переменная Email
-        private string History; // Переменная Баллов по Истории
-        private string Math; // Переменная Баллов по Математике
-        private string Rus; // Переменная Баллов по Русскому
+        private float History; // Переменная Баллов по Истории
+        private float Math; // Переменная Баллов по Математике
+        private float Rus; // Переменная Баллов по Русскому
         private string ScoreF; // Переменная среднего балла по трём предметам
 
         public Person()
@@ -43,34 +43,36 @@ namespace Homework2
             Age = age;
         } 
 
-        public void AddHeight(string height) // Данные Роста
+        public void AddHeight(string height) // Данные Email
         {
             Email = height;
         }
 
-        public void AddHistory(string history) // Данные Баллов по Истории
+        public void AddHistory(float history) // Данные Баллов по Истории
         {
             
             History = history;
         }
 
-        public void AddMath(string math) // Данные Баллов по Математике
+        public void AddMath(float math) // Данные Баллов по Математике
         {
             
             Math = math;
         }
 
-        public void AddRus(string rus) // Данные Баллов по Русскому
+        public void AddRus(float rus) // Данные Баллов по Русскому
         {           
-            Rus = rus;
-            double dhistory = double.Parse(History);
-            double dmath = double.Parse(Math);
-            double drus = double.Parse(Rus);
-            double score = (dhistory + dmath + drus) / 3; // Вычесление среднего балла по трём предметам         
+            Rus = rus;                       
+        }
+
+        public void Score() // Вычесление среднего балла по трём предметам    
+        {
+            float score = (History + Math + Rus) / 3; // Вычесление среднего балла по трём предметам         
             string scoref = score.ToString("#.##");
             ScoreF = scoref;
-
         }
+        
+
         public void ShowPerson()
         {            
             Console.WriteLine($"{Fname,10} {Lname,15} {Aname,15} {Age,7} {Email,20} {History,10} {Math,8} {Rus,9} {ScoreF,8}");

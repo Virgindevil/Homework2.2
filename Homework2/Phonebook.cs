@@ -71,22 +71,23 @@ namespace Homework2
                         Console.SetCursorPosition(40, 7);
                         person.AddAge(Console.ReadLine()); // Добавление данных
                         Console.SetCursorPosition(45, 8);
-                        Console.WriteLine("Введите Email:"); // Ввод роста
+                        Console.WriteLine("Введите Email:"); // Ввод email
                         Console.SetCursorPosition(40, 9);
                         person.AddHeight(Console.ReadLine()); // Добавление данных
                         Console.SetCursorPosition(38, 10);                        
                         Console.WriteLine("Введите баллы по истории: "); // Ввод данных пользователя                        
                         Console.SetCursorPosition(40, 11);
-                        person.AddHistory(Console.ReadLine()); // Считывание данных
+                        person.AddHistory(float.Parse (Console.ReadLine())); // Считывание данных
                         Console.SetCursorPosition(37, 12);
                         Console.WriteLine("Введите баллы по математике: "); // Ввод данных пользователя                        
                         Console.SetCursorPosition(40, 13);
-                        person.AddMath(Console.ReadLine()); // Считывание данных
+                        person.AddMath(float.Parse(Console.ReadLine())); // Считывание данных
                         Console.SetCursorPosition(36, 14);
                         Console.WriteLine("Введите баллы по русскому языку: "); // Ввод данных пользователя                        
                         Console.SetCursorPosition(40, 15);
-                        person.AddRus(Console.ReadLine()); // Считывание данных  
+                        person.AddRus(float.Parse(Console.ReadLine())); // Считывание данных  
                         Console.SetCursorPosition(35, 16);
+                        person.Score();
                         Console.WriteLine($"Готово! Ученик занесён в базу. ");
                         Console.SetCursorPosition(32, 17);
                         Console.WriteLine($"Нажмите любую клавишу, чтобы продолжить...");
